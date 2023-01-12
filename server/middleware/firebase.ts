@@ -3,6 +3,20 @@ import { getAuth } from "firebase-admin/auth"
 import { getFirestore } from "firebase-admin/firestore"
 
 export default defineEventHandler(async (event) => {
+  setResponseHeaders(event, {
+    "Access-Control-Allow-Methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Credentials": "true",
+    "Access-Control-Allow-Headers": "*",
+    "Access-Control-Expose-Headers": "*",
+  })
+
+  if (getMethod(event) === "OPTIONS") {
+    event.node.res.statusCode = 204
+    event.node.res.statusMessage = "No Content."
+    return "OK"
+  }
+
   const {
     FIREBASE_ADMIN_PROJECT_ID,
     FIREBASE_ADMIN_PRIVATE_KEY,

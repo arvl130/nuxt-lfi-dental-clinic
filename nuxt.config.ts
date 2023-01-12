@@ -1,8 +1,2 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-export default defineNuxtConfig({
-  routeRules: {
-    "/api/**": {
-      cors: true,
-    },
-  },
-})
+export default defineNuxtConfig({})
