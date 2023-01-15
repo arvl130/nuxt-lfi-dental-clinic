@@ -1,12 +1,12 @@
 import { z, ZodError } from "zod"
-import { setAppointmentPayment } from "../../../../../models/user-appointments"
+import { setAppointmentPayment } from "../../../../../../models/user-appointments"
 
 const InputSchema = z.object({
   patientUid: z.string(),
   slotSeconds: z.string(),
-  price: z.number().positive().finite(),
-  amountPaid: z.number().positive().finite(),
-  status: z.string(),
+  price: z.number().finite(),
+  amountPaid: z.number().finite(),
+  status: z.string().nullable(),
 })
 
 export default defineEventHandler(async (event) => {
