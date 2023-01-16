@@ -18,26 +18,26 @@ export default defineEventHandler(async (event) => {
   }
 
   const {
-    FIREBASE_ADMIN_PROJECT_ID,
-    FIREBASE_ADMIN_PRIVATE_KEY,
-    FIREBASE_ADMIN_CLIENT_EMAIL,
-  } = process.env
+    firebaseAdminProjectId,
+    firebaseAdminPrivateKey,
+    firebaseAdminClientEmail,
+  } = useRuntimeConfig()
 
-  if (!FIREBASE_ADMIN_PROJECT_ID)
+  if (!firebaseAdminProjectId)
     throw createError({
       statusCode: 500,
       statusMessage: "Internal server error",
       message: "Missing or invalid Firebase Admin project ID",
     })
 
-  if (!FIREBASE_ADMIN_PRIVATE_KEY)
+  if (!firebaseAdminPrivateKey)
     throw createError({
       statusCode: 500,
       statusMessage: "Internal server error",
       message: "Missing or invalid Firebase Admin private key",
     })
 
-  if (!FIREBASE_ADMIN_CLIENT_EMAIL)
+  if (!firebaseAdminClientEmail)
     throw createError({
       statusCode: 500,
       statusMessage: "Internal server error",
@@ -49,9 +49,9 @@ export default defineEventHandler(async (event) => {
       getApps().length === 0
         ? initializeApp({
             credential: cert({
-              projectId: FIREBASE_ADMIN_PROJECT_ID,
-              privateKey: FIREBASE_ADMIN_PRIVATE_KEY.replace(/\\n/g, "\n"),
-              clientEmail: FIREBASE_ADMIN_CLIENT_EMAIL,
+              projectId: firebaseAdminProjectId,
+              privateKey: firebaseAdminPrivateKey.replace(/\\n/g, "\n"),
+              clientEmail: firebaseAdminClientEmail,
             }),
           })
         : getApp()

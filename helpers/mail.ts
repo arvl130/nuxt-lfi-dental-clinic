@@ -5,15 +5,15 @@ export async function sendEmail(
   subject: string,
   body: string
 ) {
-  const { GMAIL_APP_EMAIL, GMAIL_APP_PASSWORD } = process.env
+  const { gmailAppEmail, gmailAppPassword } = useRuntimeConfig()
 
-  if (!GMAIL_APP_EMAIL)
+  if (!gmailAppEmail)
     throw createError({
       message: "Missing credentials for sending email",
       statusCode: 500,
     })
 
-  if (!GMAIL_APP_PASSWORD)
+  if (!gmailAppPassword)
     throw createError({
       message: "Missing credentials for sending email",
       statusCode: 500,
@@ -22,8 +22,8 @@ export async function sendEmail(
   const transporter = createTransport({
     service: "gmail",
     auth: {
-      user: GMAIL_APP_EMAIL,
-      pass: GMAIL_APP_PASSWORD,
+      user: gmailAppEmail,
+      pass: gmailAppPassword,
     },
   })
 
