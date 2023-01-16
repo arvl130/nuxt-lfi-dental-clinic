@@ -222,7 +222,7 @@ export async function setAppointmentPayment(
   slotSeconds: string,
   price: number,
   amountPaid: number,
-  status: string
+  status: string | null
 ) {
   await db
     .collection("users")
