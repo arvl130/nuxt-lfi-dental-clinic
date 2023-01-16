@@ -1,15 +1,15 @@
 <script setup>
-import HeroSection from "../components/patient/HeroSection.vue"
+import HeroSection from "~/components/patient/HeroSection.vue"
+import EmailNeedsVerificationDialog from "~/components/dialogs/EmailNeedsVerificationDialog.vue"
+import BoxDialog from "~/components/dialogs/BoxDialog.vue"
 import { onUnmounted, computed, reactive, ref } from "vue"
 import { getAuth } from "firebase/auth"
 import { useRouter } from "vue-router"
-import { newAppointment } from "../../utils/api/user-appointments/Appointments"
-import { signIn } from "../../utils/auth/session"
-import { userIsAdmin } from "../../utils/auth/user-role"
-import { isFilledInMedicalChart } from "../../utils/api/charts/MedicalChart"
-import { useAppointmentDetailsStore } from "../../stores/appointmentDetails"
-import BoxDialog from "../dialogs/BoxDialog.vue"
-import EmailNeedsVerificationDialog from "../dialogs/EmailNeedsVerificationDialog.vue"
+import { newAppointment } from "~/utils/api/user-appointments/Appointments"
+import { signIn } from "~/utils/auth/session"
+import { userIsAdmin } from "~/utils/auth/user-role"
+import { isFilledInMedicalChart } from "~/utils/api/charts/MedicalChart"
+import { useAppointmentDetailsStore } from "~/stores/appointmentDetails"
 
 onUnmounted(() => {
   appointmentDetailsStore.$reset()

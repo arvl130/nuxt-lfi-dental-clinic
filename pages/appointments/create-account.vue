@@ -1,11 +1,11 @@
 <script setup>
 import HeroSection from "~/components/patient/HeroSection.vue"
+import BoxDialog from "~/components/dialogs/BoxDialog.vue"
 import { useAppointmentDetailsStore } from "~/stores/appointmentDetails"
 import { getAuth, sendEmailVerification } from "@firebase/auth"
 import { computed, onUnmounted, reactive, ref } from "vue"
 import { useRouter } from "vue-router"
 import { signIn, signUpWithEmailAndPassword } from "~/utils//auth/session"
-import BoxDialog from "~/dialogs/BoxDialog.vue"
 
 const appointmentDetailsStore = useAppointmentDetailsStore()
 onUnmounted(() => {

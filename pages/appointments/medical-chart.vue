@@ -1,5 +1,5 @@
 <script setup>
-import HeroSection from "../components/patient/HeroSection.vue"
+import HeroSection from "~/components/patient/HeroSection.vue"
 import { onUnmounted, ref } from "vue"
 import { useAppointmentDetailsStore } from "~/stores/appointmentDetails"
 import { getAuth } from "firebase/auth"
@@ -8,8 +8,8 @@ import MedicalChart from "~/components/shared/MedicalChart.vue"
 import {
   updateMedicalChart,
   setFilledInMedicalChart,
-} from "~/utils//api/charts/MedicalChart"
-import BoxDialog from "../dialogs/BoxDialog.vue"
+} from "~/utils/api/charts/MedicalChart"
+import BoxDialog from "~/components/dialogs/BoxDialog.vue"
 
 onUnmounted(() => {
   appointmentDetailsStore.$reset()
