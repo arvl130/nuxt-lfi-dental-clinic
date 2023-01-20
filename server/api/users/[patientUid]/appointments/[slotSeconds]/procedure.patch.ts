@@ -8,7 +8,23 @@ const InputSchema = z.object({
 })
 
 export default defineEventHandler(async (event) => {
-  const { db } = event.context.firebase
+  const {
+    firebase: { db },
+    user,
+  } = event.context
+
+  if (!user)
+    throw createError({
+      statusCode: 401,
+      statusMessage: "Unauthorized",
+    })
+
+  if (user.accountType !== "admin")
+    throw createError({
+      statusCode: 401,
+      statusMessage: "Unauthorized",
+    })
+
   try {
     const { patientUid, slotSeconds } = getRouterParams(event)
     const { procedureBody } = await readBody(event)

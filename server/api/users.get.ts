@@ -1,7 +1,23 @@
 import { getAnyNUsers } from "../../models/users"
 
 export default defineEventHandler(async (event) => {
-  const { db } = event.context.firebase
+  const {
+    firebase: { db },
+    user,
+  } = event.context
+
+  if (!user)
+    throw createError({
+      statusCode: 401,
+      statusMessage: "Unauthorized",
+    })
+
+  if (user.accountType !== "admin")
+    throw createError({
+      statusCode: 401,
+      statusMessage: "Unauthorized",
+    })
+
   try {
     const upToNUsers = 8
     const users = await getAnyNUsers(db, upToNUsers)

@@ -6,7 +6,17 @@ const InputSchema = z.object({
 })
 
 export default defineEventHandler(async (event) => {
-  const { auth } = event.context.firebase
+  const {
+    firebase: { auth },
+    user,
+  } = event.context
+
+  if (!user)
+    throw createError({
+      statusCode: 401,
+      statusMessage: "Unauthorized",
+    })
+
   try {
     const { patientUid } = getRouterParams(event)
     const input = InputSchema.parse({
