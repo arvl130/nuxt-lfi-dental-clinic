@@ -1,5 +1,7 @@
 export class HttpError extends Error {
-  constructor(httpErrorCode, httpErrorMessage) {
+  private httpErrorCode = 200
+  private httpErrorMessage = ""
+  constructor(httpErrorCode: number, httpErrorMessage: string) {
     const message = `Got status code ${httpErrorCode}: ${httpErrorMessage}`
     super(message)
     this.httpErrorCode = httpErrorCode
@@ -8,7 +10,7 @@ export class HttpError extends Error {
 }
 
 export class ParameterError extends Error {
-  constructor(parameterName, errorMessage = "") {
+  constructor(parameterName: string, errorMessage = "") {
     const message = errorMessage
       ? `Invalid parameter ${parameterName}: ${errorMessage}`
       : `Invalid or missing parameter ${parameterName}`
