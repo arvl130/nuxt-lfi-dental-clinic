@@ -3,9 +3,14 @@ import { HttpError, ParameterError } from "../errors"
 import backendBaseURL from "./backendBaseURL"
 
 export async function deleteMessage(messageUid) {
+  const idToken = await getUserToken()
+
   const link = `${backendBaseURL}/messages/${messageUid}/delete`
   const response = await fetch(link, {
     method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${idToken}`,
+    },
   })
   const data = await response.json()
 
@@ -13,9 +18,14 @@ export async function deleteMessage(messageUid) {
 }
 
 export async function toggleMessageArchiveStatus(messageUid) {
+  const idToken = await getUserToken()
+
   const link = `${backendBaseURL}/messages/${messageUid}`
   const response = await fetch(link, {
     method: "PATCH",
+    headers: {
+      Authorization: `Bearer ${idToken}`,
+    },
   })
   const data = await response.json()
 
