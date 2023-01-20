@@ -1,21 +1,85 @@
 import { DateTime } from "luxon"
+
+export function getDateTwoDaysBeforeTimeslot(slotSeconds: number) {
+  const date = new Date(slotSeconds * 1000)
+  const month = date.toLocaleString("en-us", {
+    timeZone: "Asia/Manila",
+    month: "numeric",
+  })
+  const day = date.toLocaleString("en-us", {
+    timeZone: "Asia/Manila",
+    day: "numeric",
+  })
+  const year = date.toLocaleString("en-us", {
+    timeZone: "Asia/Manila",
+    year: "numeric",
+  })
+
+  const isoDateStr = DateTime.fromObject({
+    year: parseInt(year),
+    month: parseInt(month),
+    day: parseInt(day),
+  })
+    .minus({ days: 2 })
+    .toISO()
+
+  return new Date(isoDateStr)
+}
+
+export function getMonthSecondsFromSlotSeconds(slotSeconds: number) {
+  const month = new Date(slotSeconds * 1000).toLocaleString("en-US", {
+    timeZone: "Asia/Manila",
+    month: "numeric",
+  })
+
+  const year = new Date(slotSeconds * 1000).toLocaleString("en-US", {
+    timeZone: "Asia/Manila",
+    year: "numeric",
+  })
+
+  const isoDateStr = DateTime.fromObject(
+    {
+      year: parseInt(year),
+      month: parseInt(month),
+    },
+    {
+      zone: "Asia/Manila",
+    }
+  ).toISO()
+
+  return new Date(isoDateStr).getTime() / 1000
+}
+
+export function getUnixTimestampFromMonthAndYear(year: string, month: string) {
+  const currMonthISODateStr = DateTime.fromObject(
+    {
+      year: parseInt(year),
+      month: parseInt(month),
+    },
+    {
+      zone: "Asia/Manila",
+    }
+  ).toISO()
+  return new Date(currMonthISODateStr).getTime() / 1000
+}
+
 import { ParameterError } from "./errors"
 
-export function getDate(year, month, date) {
+export function getDate(year: number, month: number, day: number) {
   const isoDateStr = DateTime.fromObject(
     {
       year,
       month,
-      day: date,
+      day,
     },
     {
-      timezone: "Asia/Manila",
+      zone: "Asia/Manila",
     }
   ).toISO()
   return new Date(isoDateStr)
 }
 
-export function getDateOfTimeslot(timeslot) {
+export function getDateOfTimeslot(timeslot: string) {
   const result = new Date(parseInt(timeslot) * 1000).toLocaleString("en-us", {
     day: "numeric",
     timeZone: "Asia/Manila",
@@ -81,32 +145,6 @@ export function getDateTomorrow() {
   return new Date(isoDateStrTomorrow)
 }
 
-export function getDateTwoDaysBeforeTimeslot(slotSeconds) {
-  const date = new Date(slotSeconds * 1000)
-  const month = date.toLocaleString("en-us", {
-    timeZone: "Asia/Manila",
-    month: "numeric",
-  })
-  const day = date.toLocaleString("en-us", {
-    timeZone: "Asia/Manila",
-    day: "numeric",
-  })
-  const year = date.toLocaleString("en-us", {
-    timeZone: "Asia/Manila",
-    year: "numeric",
-  })
-
-  const isoDateStr = DateTime.fromObject({
-    year: parseInt(year),
-    month: parseInt(month),
-    day: parseInt(day),
-  })
-    .minus({ days: 2 })
-    .toISO()
-
-  return new Date(isoDateStr)
-}
-
 const monthNames = [
   "January",
   "February",
@@ -122,15 +160,15 @@ const monthNames = [
   "December",
 ]
 
-export function getMonthIndex(monthName) {
+export function getMonthIndex(monthName: string) {
   return monthNames.indexOf(monthName)
 }
 
-export function getMonthName(monthIndex) {
+export function getMonthName(monthIndex: number) {
   return monthNames[monthIndex]
 }
 
-export function getFirstDateOfMonth(monthName, year) {
+export function getFirstDateOfMonth(monthName: string, year: number) {
   if (!monthName) throw new ParameterError(monthName)
   if (!year) throw new ParameterError(year)
 
@@ -138,13 +176,13 @@ export function getFirstDateOfMonth(monthName, year) {
   return new Date(year, month, 1)
 }
 
-export function getFirstDateOfNextMonth(monthName, year) {
-  const month = getMonthIndex(monthName)
-  return new Date(year, month + 1, 1)
-}
+// export function getFirstDateOfNextMonth(monthName, year) {
+//   const month = getMonthIndex(monthName)
+//   return new Date(year, month + 1, 1)
+// }
 
-export function getHoursMinutesOfTimeslot(timeslot) {
-  const fullTime = new Date(timeslot * 1000)
+export function getHoursMinutesOfTimeslot(timeslot: string) {
+  const fullTime = new Date(parseInt(timeslot) * 1000)
     .toLocaleString("en-us", {
       timeZone: "Asia/Manila",
     })
@@ -156,8 +194,8 @@ export function getHoursMinutesOfTimeslot(timeslot) {
   return `${hours}:${minutes} ${ampm}`
 }
 
-export function getMonthDayYearOfTimeslot(timeslot) {
-  return new Date(timeslot * 1000).toLocaleString("en-us", {
+export function getMonthDayYearOfTimeslot(timeslot: string) {
+  return new Date(parseInt(timeslot) * 1000).toLocaleString("en-us", {
     month: "long",
     day: "numeric",
     year: "numeric",
@@ -165,10 +203,9 @@ export function getMonthDayYearOfTimeslot(timeslot) {
   })
 }
 
-export function getNumOfDaysInMonth(monthName, year) {
+export function getNumOfDaysInMonth(monthName: string, year: number) {
   if (!monthName) throw new ParameterError(monthName)
   if (!year) throw new ParameterError(year)
-  if (monthName < 0) throw new ParameterError(monthName, "Negative value")
   if (year < 0) throw new ParameterError(year, "Negative value")
 
   const month = getMonthIndex(monthName)
@@ -184,10 +221,9 @@ export function getNumOfDaysInMonth(monthName, year) {
   return new Date(year, month + 1, 0).getDate()
 }
 
-export function getOffsetFromFirstDayOfMonth(monthName, year) {
+export function getOffsetFromFirstDayOfMonth(monthName: string, year: number) {
   if (!monthName) throw new ParameterError(monthName)
   if (!year) throw new ParameterError(year)
-  if (monthName < 0) throw new ParameterError(monthName, "Negative value")
   if (year < 0) throw new ParameterError(year, "Negative value")
 
   const month = getMonthIndex(monthName)
@@ -202,7 +238,13 @@ export function getOffsetFromFirstDayOfMonth(monthName, year) {
   return new Date(year, month, 1).getDay()
 }
 
-export function getUnixSecondsFromObject(day, month, year, hours, minutes) {
+export function getUnixSecondsFromObject(
+  day: number,
+  month: number,
+  year: number,
+  hour: number,
+  minute: number
+) {
   const dateStringISO = DateTime.fromObject(
     {
       day,
@@ -210,8 +252,8 @@ export function getUnixSecondsFromObject(day, month, year, hours, minutes) {
       // sure to use the correct month numbers.
       month,
       year,
-      hours,
-      minutes,
+      hour,
+      minute,
     },
     {
       // system supports UTC+8 only

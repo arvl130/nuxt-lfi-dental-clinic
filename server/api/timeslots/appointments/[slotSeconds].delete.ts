@@ -1,5 +1,5 @@
 import { z, ZodError } from "zod"
-import { getDateTwoDaysBeforeTimeslot } from "~/utils/conversions"
+import { getDateTwoDaysBeforeTimeslot } from "~/utils/date-conversions"
 import { cancelAppointment } from "~/models/appointments"
 
 const InputSchema = z.object({

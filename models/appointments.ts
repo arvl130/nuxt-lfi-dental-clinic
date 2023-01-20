@@ -3,7 +3,7 @@ import { Auth } from "firebase-admin/auth"
 import {
   getMonthSecondsFromSlotSeconds,
   getUnixTimestampFromMonthAndYear,
-} from "~/utils/conversions"
+} from "~/utils/date-conversions"
 import { sendEmail } from "~/utils/mail"
 
 export async function cancelAppointment(
