@@ -3,8 +3,8 @@ import { Auth } from "firebase-admin/auth"
 import {
   getMonthSecondsFromSlotSeconds,
   getUnixTimestampFromMonthAndYear,
-} from "../helpers/conversions"
-import { sendEmail } from "../helpers/mail"
+} from "~/utils/conversions"
+import { sendEmail } from "~/utils/mail"
 
 export async function cancelAppointment(
   db: Firestore,

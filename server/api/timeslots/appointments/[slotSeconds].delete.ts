@@ -1,6 +1,6 @@
 import { z, ZodError } from "zod"
-import { getDateTwoDaysBeforeTimeslot } from "../../../../helpers/conversions"
-import { cancelAppointment } from "../../../../models/appointments"
+import { getDateTwoDaysBeforeTimeslot } from "~/utils/conversions"
+import { cancelAppointment } from "~/models/appointments"
 
 const InputSchema = z.object({
   patientUid: z.string(),

@@ -2,7 +2,7 @@ import { FieldValue, FieldPath, Firestore } from "firebase-admin/firestore"
 import {
   getMonthSecondsFromSlotSeconds,
   getUnixTimestampFromMonthAndYear,
-} from "../helpers/conversions"
+} from "~/utils/conversions"
 
 export async function createReservation(
   db: Firestore,
