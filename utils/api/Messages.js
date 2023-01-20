@@ -1,3 +1,4 @@
+import { getUserToken } from "../auth/user-token"
 import { HttpError, ParameterError } from "../errors"
 import backendBaseURL from "./backendBaseURL"
 
@@ -22,9 +23,17 @@ export async function toggleMessageArchiveStatus(messageUid) {
 }
 
 export async function getAllMessages() {
+  const idToken = await getUserToken()
+
   const link = `${backendBaseURL}/messages`
-  const response = await fetch(link)
+  const response = await fetch(link, {
+    headers: {
+      Authorization: `Bearer ${idToken}`,
+    },
+  })
   const data = await response.json()
+
+  if (!response.ok) throw new HttpError(response.status, data.message)
   return data.payload
 }
 
