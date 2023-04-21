@@ -14,14 +14,13 @@ export function isSignedIn() {
   return false
 }
 
-const profilePictureStore = useProfilePictureStore()
-
 export async function signIn(email, password) {
   if (!email) throw new ParameterError(email)
   if (!password) throw new ParameterError(password)
 
   const auth = getAuth()
   const userCredential = await signInWithEmailAndPassword(auth, email, password)
+  const profilePictureStore = useProfilePictureStore()
   profilePictureStore.$reset()
   profilePictureStore.initialize()
 
