@@ -1,26 +1,11 @@
 # Clinic Management System for LFI Dental Clinic using Nuxt
 
-This is a project I've been working on to help our team iterate faster in
-developing this website.
+![Screenshot of the home page](https://raw.githubusercontent.com/arvl130/nuxt-lfi-dental-clinic/master/preview-2.png)
+![Screenshot of the appointments scheduling page](https://raw.githubusercontent.com/arvl130/nuxt-lfi-dental-clinic/master/preview-1.png)
 
-There are two main reasons why I've decided to go with [Nuxt](https://nuxt.com/)
-for this experiment:
+This is a clinic management system for LFI Dental Clinic developed in compliance to the requirements of SE101, IPT101, HCI101, IM101, and SIA101 subject of the Bachelor of Science in Information Technology program of Quezon City University.
 
-1. The original project is built with Vue.
-
-2. It supports both the frontend and backend functionality of the website through
-   its `/pages` and `/server` directories, respectively.
-
-3. There is built-in support for Typescript, which is important for any
-   large-scale project.
-
-Currently, only the backend REST API has been implemented here. The original site is
-already using this new backend REST API, but there is still a lot of work that needs
-to be done in order to also migrate the frontend.
-
-As always, this is free software. Anyone is free to inspect, copy, and modify the code
-that is published here. See the sections below for more information on the licensing and
-how to setup this project.
+Originally, this project was built with Vue + Vite, but later on it was migrated to Nuxt for easier maintenance. The original Vue frontend project can be found [here](https://gitlab.com/arvl/vue-lfi-dental-clinic). The original Node backend project can be found [here](https://gitlab.com/arvl/node-lfi-dental-clinic).
 
 ## Setup
 
