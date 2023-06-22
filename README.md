@@ -1,4 +1,4 @@
-# Clinic Management System for LFI Dental Clinic using Nuxt
+# Clinic Management System for LFI Dental Clinic
 
 ![Screenshot of the home page](https://raw.githubusercontent.com/arvl130/nuxt-lfi-dental-clinic/master/preview-2.png)
 ![Screenshot of the appointments scheduling page](https://raw.githubusercontent.com/arvl130/nuxt-lfi-dental-clinic/master/preview-1.png)
