@@ -1,15 +1,14 @@
 import { z, ZodError } from "zod"
-import { createAppointment } from "../../../../models/appointments"
+import { getAppointmentProcedure } from "../../../../../../../models/user-appointments"
 
 const InputSchema = z.object({
   patientUid: z.string(),
-  service: z.string(),
   slotSeconds: z.string(),
 })
 
 export default defineEventHandler(async (event) => {
   const {
-    firebase: { db, auth },
+    firebase: { db },
     user,
   } = event.context
 
@@ -19,32 +18,23 @@ export default defineEventHandler(async (event) => {
       statusMessage: "Unauthorized",
     })
 
-  if (user.accountType !== "patient")
-    throw createError({
-      statusCode: 401,
-      statusMessage: "Unauthorized",
-    })
-
   try {
-    const { slotSeconds, service, patientUid } = await readBody(event)
+    const { patientUid, slotSeconds } = getRouterParams(event)
 
     const input = InputSchema.parse({
-      slotSeconds,
-      service,
       patientUid,
+      slotSeconds,
     })
 
-    await createAppointment(
+    const userAppointmentProcedure = await getAppointmentProcedure(
       db,
-      auth,
       input.patientUid,
-      input.service,
       input.slotSeconds
     )
 
     return {
-      message: "New appointment created",
-      payload: slotSeconds,
+      message: "User appointment procedure retrieved",
+      payload: userAppointmentProcedure,
     }
   } catch (e) {
     if (e instanceof ZodError)

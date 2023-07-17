@@ -1,34 +1,33 @@
+import { createMessage } from "../../../models/messages"
 import { z, ZodError } from "zod"
-import { createPatientUser } from "../../../models/users"
 
 const InputSchema = z.object({
-  email: z.string().email(),
-  password: z.string(),
-  fullName: z.string(),
+  body: z.string(),
+  email: z.string(),
+  senderName: z.string(),
 })
 
 export default defineEventHandler(async (event) => {
-  const { db, auth } = event.context.firebase
+  const { db } = event.context.firebase
   try {
-    const { email, password, fullName } = await readBody(event)
+    const { body, email, senderName } = await readBody(event)
 
     const input = InputSchema.parse({
+      body,
       email,
-      password,
-      fullName,
+      senderName,
     })
 
-    const user = await createPatientUser(
+    const message = await createMessage(
       db,
-      auth,
       input.email,
-      input.password,
-      input.fullName
+      input.body,
+      input.senderName
     )
 
     return {
-      message: "User created",
-      payload: user,
+      message: "Message created",
+      payload: message,
     }
   } catch (e) {
     if (e instanceof ZodError)

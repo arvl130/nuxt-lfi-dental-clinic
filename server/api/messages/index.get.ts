@@ -1,4 +1,4 @@
-import { getAllMessages } from "../../models/messages"
+import { getAllMessages } from "../../../models/messages"
 
 export default defineEventHandler(async (event) => {
   const {

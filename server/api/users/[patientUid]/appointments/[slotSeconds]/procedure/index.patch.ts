@@ -1,5 +1,5 @@
 import { z, ZodError } from "zod"
-import { setAppointmentProcedure } from "../../../../../../models/user-appointments"
+import { setAppointmentProcedure } from "../../../../../../../models/user-appointments"
 
 const InputSchema = z.object({
   patientUid: z.string(),

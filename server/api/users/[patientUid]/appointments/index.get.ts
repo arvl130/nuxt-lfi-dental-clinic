@@ -1,8 +1,8 @@
 import { z, ZodError } from "zod"
-import { toggleMessageArchiveStatus } from "../../../models/messages"
+import { getAllAppointments } from "../../../../../models/user-appointments"
 
 const InputSchema = z.object({
-  uid: z.string(),
+  patientUid: z.string(),
 })
 
 export default defineEventHandler(async (event) => {
@@ -15,26 +15,20 @@ export default defineEventHandler(async (event) => {
     throw createError({
       statusCode: 401,
       statusMessage: "Unauthorized",
-      message: "You must login to update your full name.",
-    })
-
-  if (user.accountType !== "admin")
-    throw createError({
-      statusCode: 401,
-      statusMessage: "Unauthorized",
     })
 
   try {
-    const { uid } = getRouterParams(event)
+    const { patientUid } = getRouterParams(event)
 
     const input = InputSchema.parse({
-      uid,
+      patientUid,
     })
 
-    const { newStatus } = await toggleMessageArchiveStatus(db, input.uid)
+    const appointments = await getAllAppointments(db, input.patientUid)
 
     return {
-      message: `Message is now ${newStatus}`,
+      message: "User appointments retrieved",
+      payload: appointments,
     }
   } catch (e) {
     if (e instanceof ZodError)

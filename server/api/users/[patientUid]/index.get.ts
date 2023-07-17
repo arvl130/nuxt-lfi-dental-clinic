@@ -1,5 +1,5 @@
 import { ZodError, z } from "zod"
-import { getUser } from "../../../models/users"
+import { getUser } from "../../../../models/users"
 
 const InputSchema = z.object({
   patientUid: z.string(),

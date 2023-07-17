@@ -1,4 +1,4 @@
-import { getAnyNUsers } from "../../models/users"
+import { getAnyNUsers } from "../../../models/users"
 
 export default defineEventHandler(async (event) => {
   const {
