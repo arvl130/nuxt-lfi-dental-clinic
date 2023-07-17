@@ -8,10 +8,12 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@types/luxon": "^3.3.0",
+    "@types/node": "^18.16.19",
     "@types/nodemailer": "^6.4.8",
-    "nuxt": "3.4.2"
+    "nuxt": "3.6.3"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
