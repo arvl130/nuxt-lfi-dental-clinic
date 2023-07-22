@@ -7,6 +7,22 @@ This is a clinic management system for LFI Dental Clinic developed in compliance
 
 Originally, this project was built with Vue + Vite, but later on it was migrated to Nuxt for easier maintenance. The original Vue frontend project can be found [here](https://gitlab.com/arvl/vue-lfi-dental-clinic). The original Node backend project can be found [here](https://gitlab.com/arvl/node-lfi-dental-clinic).
 
+## Features
+
+- Responsive frontend design
+- Email-based sign in with verification
+- Streamlined appointment scheduling and management
+- Feature-rich dentist forms
+- Efficient patient record system
+- Automated reminders
+
+## Tech stack
+
+- [Vue](https://vuejs.org) and [Nuxt](https://nuxt.com) for frontend and backend
+- [Tailwind CSS](tailwindcss.com) for styling
+- [Firebase](https://firebase.google.com) for storage, database, and authentication
+- [CloudWatch Events](https://aws.amazon.com/cloudwatch) for automated reminders
+
 ## Setup
 
 This project uses Node.js with NPM or Yarn for project management. For authentication and
