@@ -16,7 +16,7 @@ Originally, this project was built with Vue + Vite, but later on it was migrated
 - Efficient patient record system
 - Automated reminders
 
-## Tech stack
+## Tech Stack
 
 - [Vue](https://vuejs.org) and [Nuxt](https://nuxt.com) for frontend and backend
 - [Tailwind CSS](tailwindcss.com) for styling
