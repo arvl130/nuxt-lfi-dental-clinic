@@ -57,4 +57,4 @@ $ yarn run dev
 
 This project is licensed under the MIT License.
 
-Copyright (c) 2023 Angelo Geulin, Mike Gester Sabuga, Eddie Jay Castuera, Marichelle Casbadillo, Mariel Elaine Lopez, Anne Clarisse Gonzales, Winchell Castillo
+Copyright © 2023 Angelo Geulin, Mike Gester Sabuga, Eddie Jay Castuera, Marichelle Casbadillo, Mariel Elaine Lopez, Anne Clarisse Gonzales, Winchell Castillo
