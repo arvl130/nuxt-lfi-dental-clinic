@@ -1,4 +1,4 @@
-Copyright (c) 2023 Angelo Geulin, Mike Gester Sabuga, Eddie Jay Castuera, Marichelle Casbadillo, Mariel Elaine Lopez, Anne Clarisse Gonzales, Winchell Castillo
+Copyright © 2023 Angelo Geulin, Mike Gester Sabuga, Eddie Jay Castuera, Marichelle Casbadillo, Mariel Elaine Lopez, Anne Clarisse Gonzales, Winchell Castillo
 
 ```
 Permission is hereby granted, free of charge, to any person obtaining a copy of this
