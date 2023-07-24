@@ -4,7 +4,11 @@ import { useAuthStore } from "~/stores/auth"
 
 useHead({
   link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
-  title: "LFI Dental Clinic",
+})
+
+useSeoMeta({
+  description:
+    "Experience exceptional and affordable dental care at LFI Dental Clinic. Trustworthy services dedicated to improving your dental health. Visit us in Jordan Plains Subd., Novaliches, Quezon City.",
 })
 
 const currentUserStore = useAuthStore()
