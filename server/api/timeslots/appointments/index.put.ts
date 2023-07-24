@@ -1,8 +1,8 @@
-import { createAppointment } from "../../../models/appointments"
+import { createAppointment } from "../../../../models/appointments"
 import { z, ZodError } from "zod"
 
 const InputSchema = z.object({
-  slotSeconds: z.string(),
+  slotSeconds: z.number(),
   service: z.string(),
   patientUid: z.string(),
 })

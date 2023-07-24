@@ -114,10 +114,10 @@ export async function createAppointment(
   db: Firestore,
   auth: Auth,
   patientUid: string,
-  slotSeconds: string,
+  slotSeconds: number,
   service: string
 ) {
-  const monthSeconds = getMonthSecondsFromSlotSeconds(parseInt(slotSeconds))
+  const monthSeconds = getMonthSecondsFromSlotSeconds(slotSeconds)
   const batch = db.batch()
   const userAppointmentsRef = db
     .collection("users")
@@ -159,36 +159,40 @@ export async function createAppointment(
     procedureVisible: false,
   })
 
-  batch.update(reservationsRef, {
-    [slotSeconds]: {
-      status: "taken",
+  batch.set(
+    reservationsRef,
+    {
+      [slotSeconds]: {
+        status: "taken",
+      },
     },
-  })
+    {
+      merge: true,
+    }
+  )
 
   await batch.commit()
 
-  const formattedDate = new Date(parseInt(slotSeconds) * 1000).toLocaleString(
-    "en-us",
-    {
-      timeZone: "Asia/Manila",
-      month: "long",
-      year: "numeric",
-      day: "numeric",
-    }
-  )
-  const hours = new Date(parseInt(slotSeconds) * 1000)
+  const formattedDate = new Date(slotSeconds * 1000).toLocaleString("en-us", {
+    timeZone: "Asia/Manila",
+    month: "long",
+    year: "numeric",
+    day: "numeric",
+  })
+
+  const hours = new Date(slotSeconds * 1000)
     .toLocaleString("en-us", {
       timeZone: "Asia/Manila",
     })
     .split(" ")[1]
     .split(":")[0]
-  const minutes = new Date(parseInt(slotSeconds) * 1000)
+  const minutes = new Date(slotSeconds * 1000)
     .toLocaleString("en-us", {
       timeZone: "Asia/Manila",
     })
     .split(" ")[1]
     .split(":")[1]
-  const ampm = new Date(parseInt(slotSeconds) * 1000)
+  const ampm = new Date(slotSeconds * 1000)
     .toLocaleString("en-us", {
       timeZone: "Asia/Manila",
     })
