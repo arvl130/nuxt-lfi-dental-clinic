@@ -50,9 +50,9 @@ const onSendButton = async () => {
         </div>
         <div class="text-sky-700 mt-4 mb-5 font-semibold">
           <span class="text-teal-500 font-bold">Mobile: </span>
-          09 2846 32914 <br />
+          (+63) 928 463 2914 <br />
           <span class="text-teal-500 font-bold">Landline: </span>
-          857 99537
+          (+63) 28 579 9537
         </div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d286.8076344268989!2d121.04312885570937!3d14.723433981933423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b0f84eb18371%3A0x894844ab192dd95b!2s2305%20Jordan%20Subd.%2C%20Novaliches%2C%20Quezon%20City%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1651031166862!5m2!1sen!2sph"
