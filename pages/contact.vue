@@ -34,15 +34,15 @@ const onSendButton = async () => {
 }
 </script>
 <template>
-  <HeroSection>Contact Us</HeroSection>
+  <HeroSection><h2>Contact Us</h2></HeroSection>
   <div
     class="max-w-screen-xl px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto text-gray-900"
   >
-    <div class="flex flex-col justify-between">
+    <section class="flex flex-col justify-between">
       <div>
-        <h2 class="text-4xl lg:text-5xl font-bold leading-tight text-sky-700">
+        <h3 class="text-4xl lg:text-5xl font-bold leading-tight text-sky-700">
           Get in Touch
-        </h2>
+        </h3>
         <ul class="text-sky-700 pt-3 pb-5 font-semibold">
           <li>
             <span class="text-teal-500 font-bold">Address:</span>
@@ -69,14 +69,14 @@ const onSendButton = async () => {
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-    </div>
-    <div class="shadow-lg rounded-lg p-6 border-2 border-sky-700">
+    </section>
+    <section class="shadow-lg rounded-lg p-6 border-2 border-sky-700">
       <div>
-        <h2
+        <h3
           class="text-4xl lg:text-5xl font-bold leading-tight text-sky-700 mb-5"
         >
           Send Message
-        </h2>
+        </h3>
 
         <input
           class="w-full bg-gray-100 text-sky-700 mt-2 border-2 border-sky-700 p-3 rounded-full focus:outline-none focus:shadow-outline transition duration-200"
@@ -125,6 +125,6 @@ const onSendButton = async () => {
           <span v-else>Send</span>
         </button>
       </div>
-    </div>
+    </section>
   </div>
 </template>
