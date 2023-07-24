@@ -62,11 +62,11 @@ useHead({
     id="services"
     class="px-4 py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
   >
-    <h5
+    <h2
       class="mt-5 mb-5 text-3xl md:text-5xl font-bold text-center text-sky-700"
     >
       OUR SERVICES
-    </h5>
+    </h2>
     <div class="grid row-gap-8 sm:row-gap-0 sm:grid-cols-2 lg:grid-cols-3">
       <NuxtLink to="/services/general-dentistry">
         <div class="p-8">
@@ -76,9 +76,9 @@ useHead({
             >
               <img src="~/assets/img/services/general_dentistry.ico" />
             </div>
-            <h1 class="mb-2 text-2xl font-semibold leading-5">
+            <h3 class="mb-2 text-2xl font-semibold leading-5">
               GENERAL DENTISTRY
-            </h1>
+            </h3>
           </div>
         </div>
       </NuxtLink>
@@ -90,9 +90,9 @@ useHead({
             >
               <img src="~/assets/img/services/cosmetic_dentistry.ico" />
             </div>
-            <h1 class="mb-2 text-2xl font-semibold leading-5">
+            <h3 class="mb-2 text-2xl font-semibold leading-5">
               COSMETICS SURGERY
-            </h1>
+            </h3>
           </div>
         </div>
       </NuxtLink>
@@ -104,7 +104,7 @@ useHead({
             >
               <img src="~/assets/img/services/oral_surgery.ico" />
             </div>
-            <h1 class="mb-2 text-2xl font-semibold leading-5">ORAL SURGERY</h1>
+            <h3 class="mb-2 text-2xl font-semibold leading-5">ORAL SURGERY</h3>
           </div>
         </div>
       </NuxtLink>
@@ -116,7 +116,7 @@ useHead({
             >
               <img src="~/assets/img/services/orthodontics.ico" />
             </div>
-            <h1 class="mb-2 text-2xl font-semibold leading-5">ORTHODONTICS</h1>
+            <h3 class="mb-2 text-2xl font-semibold leading-5">ORTHODONTICS</h3>
           </div>
         </div>
       </NuxtLink>
@@ -128,9 +128,9 @@ useHead({
             >
               <img src="~/assets/img/services/pediatric_dentistry.ico" />
             </div>
-            <h1 class="mb-2 text-2xl font-semibold leading-5">
+            <h3 class="mb-2 text-2xl font-semibold leading-5">
               PEDIATRIC DENTISTRY
-            </h1>
+            </h3>
           </div>
         </div>
       </NuxtLink>
@@ -142,9 +142,9 @@ useHead({
             >
               <img src="~/assets/img/services/prosthodontics.ico" />
             </div>
-            <h1 class="mb-2 text-2xl font-semibold leading-5">
+            <h3 class="mb-2 text-2xl font-semibold leading-5">
               PROSTHODONTICS
-            </h1>
+            </h3>
           </div>
         </div>
       </NuxtLink>
@@ -156,18 +156,18 @@ useHead({
   <section>
     <div class="z-20 w-full bg-gradient-to-br from-teal-500 to-sky-700">
       <div class="max-w-4xl px-4 py-10 mx-auto sm:px-6 lg:px-8 faqs">
-        <h5 class="mb-10 text-3xl md:text-5xl font-bold text-center text-white">
+        <h2 class="mb-10 text-3xl md:text-5xl font-bold text-center text-white">
           FREQUENTLY ASKED QUESTIONS
-        </h5>
+        </h2>
 
         <blockquote
           class="p-8 transition-colors duration-200 ease-in-out bg-white rounded shadow-lg hover:bg-gray-200"
         >
           <div class="flex items-center">
             <div class="ml-4 text-sm">
-              <p class="font-medium">
+              <h3 class="font-medium">
                 Do I need to arrive early for my first appointment?
-              </p>
+              </h3>
             </div>
           </div>
 
@@ -184,7 +184,9 @@ useHead({
         >
           <div class="flex items-center">
             <div class="ml-4 text-sm">
-              <p class="font-medium">What are early signs of dental trouble?</p>
+              <h3 class="font-medium">
+                What are early signs of dental trouble?
+              </h3>
             </div>
           </div>
           <p class="mt-4 text-gray-500">
@@ -201,7 +203,9 @@ useHead({
         >
           <div class="flex items-center">
             <div class="ml-4 text-sm">
-              <p class="font-medium">What are early signs of dental trouble?</p>
+              <h3 class="font-medium">
+                What are early signs of dental trouble?
+              </h3>
             </div>
           </div>
           <p class="mt-4 text-gray-500">
@@ -235,11 +239,11 @@ useHead({
         <p
           class="inline-block px-3 py-px mb-4 text-sm font-semibold tracking-wider uppercase rounded-full text-sky-700 bg-teal-accent-400"
         >
-          LFI DENTAL CLINIC
+          LFI Dental Clinic
         </p>
       </div>
       <h2
-        class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-center text-teal-500 sm:text-4xl md:mx-auto"
+        class="uppercase max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-center text-teal-500 sm:text-4xl md:mx-auto"
       >
         <span class="relative inline-block">
           <svg
@@ -264,9 +268,9 @@ useHead({
               height="24"
             ></rect>
           </svg>
-          <span class="relative text-sky-700">HOW</span>
+          <span class="relative text-sky-700">How</span>
         </span>
-        TO SET AN APPOINTMENT
+        to set an appointment
       </h2>
       <p class="text-base text-center teal-5 md:text-lg">
         Set your appointment now through these three (3) easy steps.
@@ -280,10 +284,10 @@ useHead({
           <NuxtLink
             to="/appointments"
             class="inline-flex items-center font-semibold transition-colors duration-200 ease-in-out text-deep-purple-accent-400 hover:text-teal-500 hover:scale-110"
-            ><h1 class="text-6xl">1</h1>
+            ><span class="text-6xl">1</span>
           </NuxtLink>
         </div>
-        <h6 class="mb-2 text-2xl font-extrabold">Choose a date.</h6>
+        <h3 class="mb-2 text-2xl font-extrabold">Choose a date.</h3>
         <p class="max-w-md mb-3 text-sm text-sky-700 sm:mx-auto">
           Go the
           <NuxtLink to="/appointments" class="border-b border-sky-700"
@@ -331,10 +335,10 @@ useHead({
           <NuxtLink
             to="/appointments"
             class="inline-flex items-center font-semibold transition-colors duration-200 ease-in-out text-deep-purple-accent-400 hover:text-teal-500 hover:scale-110"
-            ><h1 class="text-6xl">2</h1>
+            ><span class="text-6xl">2</span>
           </NuxtLink>
         </div>
-        <h6 class="mb-2 text-2xl font-extrabold">Create your Account.</h6>
+        <h3 class="mb-2 text-2xl font-extrabold">Create your Account.</h3>
         <p class="max-w-md mb-3 text-sm text-sky-700 sm:mx-auto">
           Create an account or
           <NuxtLink to="/login" class="border-b border-sky-700"
@@ -381,10 +385,10 @@ useHead({
           <NuxtLink
             to="/patient/history"
             class="inline-flex items-center font-semibold transition-colors duration-200 ease-in-out text-deep-purple-accent-400 hover:text-teal-500 hover:scale-110"
-            ><h1 class="text-6xl">3</h1>
+            ><span class="text-6xl">3</span>
           </NuxtLink>
         </div>
-        <h6 class="mb-2 text-2xl font-extrabold">Done.</h6>
+        <h3 class="mb-2 text-2xl font-extrabold">Done.</h3>
         <p class="max-w-md mb-3 text-sm text-sky-700 sm:mx-auto">
           View your scheduled appointments in the
           <NuxtLink to="/patient/history" class="border-b border-sky-700">

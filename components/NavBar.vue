@@ -64,7 +64,7 @@ onMounted(async () => {
         class="flex items-center py-3 text-xl font-bold text-sky-700 md:text-2xl hover:text-teal-500"
       >
         <img src="~/assets/img/lfi-logo-transparent.png" class="h-12 px-4" />
-        <span class="hidden xst:inline">LFI DENTAL CLINIC</span>
+        <h1 class="hidden uppercase xst:inline">LFI Dental Clinic</h1>
       </NuxtLink>
       <!-- Mobile menu button -->
       <div @click="toggleNav" class="xl:hidden shrink-0">
