@@ -1,5 +1,8 @@
 <script setup>
 import HeroSection from "~/components/patient/HeroSection.vue"
+useHead({
+  title: "Prosthodontics \u2013 LFI Dental Clinic",
+})
 </script>
 
 <template>

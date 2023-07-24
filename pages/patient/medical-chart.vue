@@ -9,6 +9,10 @@ import {
 import { useAuthStore } from "~/stores/auth"
 import { storeToRefs } from "pinia"
 
+useHead({
+  title: "Medical Chart \u2013 LFI Dental Clinic",
+})
+
 definePageMeta({
   layout: "patient",
 })

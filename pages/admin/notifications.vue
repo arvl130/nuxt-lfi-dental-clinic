@@ -4,6 +4,9 @@ import { getAppointmentsRequestingProcedureAccess } from "~/utils/api/user-appoi
 import { storeToRefs } from "pinia"
 import { useAuthStore } from "~/stores/auth"
 
+useHead({
+  title: "Notifications \u2013 LFI Dental Clinic",
+})
 definePageMeta({ layout: "admin" })
 
 const userAppointments = ref([])

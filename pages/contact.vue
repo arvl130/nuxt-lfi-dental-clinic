@@ -3,6 +3,10 @@ import { computed, reactive, ref } from "vue"
 import { createMessage } from "~/utils//api/Messages"
 import HeroSection from "~/components/patient/HeroSection.vue"
 
+useHead({
+  title: "Contact Us \u2013 LFI Dental Clinic",
+})
+
 const message = reactive({
   senderName: "",
   email: "",

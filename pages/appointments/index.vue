@@ -23,6 +23,10 @@ import { useRoute, useRouter } from "vue-router"
 import { isFilledInMedicalChart } from "~/utils//api/charts/MedicalChart"
 import { getAuth } from "firebase/auth"
 
+useHead({
+  title: "Set an Appointment \u2013 LFI Dental Clinic",
+})
+
 onUnmounted(() => {
   appointmentDetailsStore.$reset()
 })

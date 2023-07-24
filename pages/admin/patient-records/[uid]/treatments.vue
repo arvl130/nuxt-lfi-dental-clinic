@@ -5,6 +5,10 @@ import { getUserAppointments } from "~/utils/api/user-appointments/Appointments"
 import { storeToRefs } from "pinia"
 import { useAuthStore } from "~/stores/auth"
 
+useHead({
+  title: "Dental Treatments \u2013 LFI Dental Clinic",
+})
+
 definePageMeta({ layout: "admin" })
 
 const route = useRoute()

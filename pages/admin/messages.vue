@@ -7,6 +7,10 @@ import {
 } from "~/utils/api/Messages"
 import ExternalArrowIcon from "~/components/icons/ExternalArrowIcon.vue"
 
+useHead({
+  title: "Messages \u2013 LFI Dental Clinic",
+})
+
 definePageMeta({ layout: "admin" })
 
 const { data, isLoading } = useQuery({

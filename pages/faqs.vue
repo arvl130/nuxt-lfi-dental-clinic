@@ -1,3 +1,9 @@
+<script setup lang="ts">
+useHead({
+  title: "Frequently Asked Questions \u2013 LFI Dental Clinic",
+})
+</script>
+
 <template>
   <!-- Frequently Asked Questions -->
   <section>

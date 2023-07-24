@@ -5,6 +5,10 @@ import HeroSection from "~/components/patient/HeroSection.vue"
 import BoxDialog from "~/components/dialogs/BoxDialog.vue"
 import { FirebaseError } from "@firebase/util"
 
+useHead({
+  title: "Forgot Password \u2013 LFI Dental Clinic",
+})
+
 const enteredEmail = ref("")
 
 const isResetLinkButtonEnabled = computed(() => {

@@ -7,6 +7,10 @@ import { computed, onUnmounted, reactive, ref } from "vue"
 import { useRouter } from "vue-router"
 import { signIn, signUpWithEmailAndPassword } from "~/utils//auth/session"
 
+useHead({
+  title: "Create Account \u2013 LFI Dental Clinic",
+})
+
 const appointmentDetailsStore = useAppointmentDetailsStore()
 onUnmounted(() => {
   appointmentDetailsStore.$reset()

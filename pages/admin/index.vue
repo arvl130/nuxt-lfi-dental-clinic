@@ -4,6 +4,10 @@ import { getReminders, setReminders } from "~/utils/api/Reminders"
 import { useAuthStore } from "~/stores/auth"
 import { storeToRefs } from "pinia"
 
+useHead({
+  title: "Dashboard \u2013 LFI Dental Clinic",
+})
+
 definePageMeta({ layout: "admin" })
 
 const isEditing = ref(false)

@@ -5,6 +5,10 @@ import { getUserAppointments } from "~/utils/api/user-appointments/Appointments"
 import { useAuthStore } from "~/stores/auth"
 import { storeToRefs } from "pinia"
 
+useHead({
+  title: "Appointment History \u2013 LFI Dental Clinic",
+})
+
 definePageMeta({
   layout: "patient",
 })

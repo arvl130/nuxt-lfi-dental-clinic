@@ -11,6 +11,10 @@ import { userIsAdmin } from "~/utils/auth/user-role"
 import { isFilledInMedicalChart } from "~/utils/api/charts/MedicalChart"
 import { useAppointmentDetailsStore } from "~/stores/appointmentDetails"
 
+useHead({
+  title: "Login \u2013 LFI Dental Clinic",
+})
+
 onUnmounted(() => {
   appointmentDetailsStore.$reset()
 })

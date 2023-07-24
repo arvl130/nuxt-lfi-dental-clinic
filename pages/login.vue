@@ -11,6 +11,10 @@ import { isFilledInMedicalChart } from "~/utils/api/charts/MedicalChart"
 import { newAppointment } from "~/utils/api/user-appointments/Appointments"
 import { useAppointmentDetailsStore } from "~/stores/appointmentDetails"
 
+useHead({
+  title: "Login \u2013 LFI Dental Clinic",
+})
+
 const isSuccessModalVisible = ref(false)
 const accountCredentials = reactive({
   email: "",

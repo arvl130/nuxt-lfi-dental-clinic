@@ -4,6 +4,10 @@ import { getUserAppointmentProcedure } from "~/utils/api/user-appointments/Appoi
 import { useAuthStore } from "~/stores/auth"
 import { storeToRefs } from "pinia"
 
+useHead({
+  title: "Procedure \u2013 LFI Dental Clinic",
+})
+
 definePageMeta({
   layout: "patient",
 })

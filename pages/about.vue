@@ -1,5 +1,9 @@
 <script setup>
 import heroImage from "~/assets/img/about/bg-about.png"
+
+useHead({
+  title: "About \u2013 LFI Dental Clinic",
+})
 </script>
 <template>
   <!-- Hero section -->

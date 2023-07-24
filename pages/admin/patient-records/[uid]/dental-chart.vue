@@ -13,6 +13,10 @@ import { getMonthName } from "~/utils/date-conversions"
 import { storeToRefs } from "pinia"
 import { useAuthStore } from "~/stores/auth"
 
+useHead({
+  title: "Dental Chart \u2013 LFI Dental Clinic",
+})
+
 definePageMeta({ layout: "admin" })
 
 const route = useRoute()

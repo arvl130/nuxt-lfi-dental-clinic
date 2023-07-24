@@ -4,6 +4,10 @@ import PatientRecordsPagePatientItem from "~/components/admin/PatientRecordsPage
 import { storeToRefs } from "pinia"
 import { useAuthStore } from "~/stores/auth"
 
+useHead({
+  title: "Patient Records \u2013 LFI Dental Clinic",
+})
+
 definePageMeta({ layout: "admin" })
 
 const searchFilter = ref("")

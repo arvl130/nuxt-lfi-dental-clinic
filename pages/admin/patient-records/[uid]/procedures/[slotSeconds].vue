@@ -11,6 +11,10 @@ import {
 import { storeToRefs } from "pinia"
 import { useAuthStore } from "~/stores/auth"
 
+useHead({
+  title: "Procedure \u2013 LFI Dental Clinic",
+})
+
 definePageMeta({ layout: "admin" })
 
 const route = useRoute()

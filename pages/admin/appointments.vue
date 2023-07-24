@@ -9,6 +9,10 @@ import { DateTime } from "luxon"
 import { storeToRefs } from "pinia"
 import { useAuthStore } from "~/stores/auth"
 
+useHead({
+  title: "Appointments \u2013 LFI Dental Clinic",
+})
+
 definePageMeta({ layout: "admin" })
 
 const selected = reactive({

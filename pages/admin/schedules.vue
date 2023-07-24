@@ -7,6 +7,10 @@ import SchedulesPageTimeslotsItem from "~/components/admin/SchedulesPageTimeslot
 import { storeToRefs } from "pinia"
 import { useAuthStore } from "~~/stores/auth"
 
+useHead({
+  title: "Schedules \u2013 LFI Dental Clinic",
+})
+
 definePageMeta({ layout: "admin" })
 
 const selected = reactive({

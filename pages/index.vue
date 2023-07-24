@@ -1,3 +1,8 @@
+<script setup lang="ts">
+useHead({
+  title: "LFI Dental Clinic",
+})
+</script>
 <style>
 .homepage-hero-section:after {
   content: "";

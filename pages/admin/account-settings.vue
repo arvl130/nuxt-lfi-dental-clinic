@@ -1,5 +1,9 @@
 <script setup>
 import AccountSettings from "~/components/shared/AccountSettings.vue"
+
+useHead({
+  title: "Account Settings \u2013 LFI Dental Clinic",
+})
 definePageMeta({ layout: "admin" })
 </script>
 <template>

@@ -11,6 +11,10 @@ import {
 } from "~/utils/api/charts/MedicalChart"
 import BoxDialog from "~/components/dialogs/BoxDialog.vue"
 
+useHead({
+  title: "Medical Chart \u2013 LFI Dental Clinic",
+})
+
 onUnmounted(() => {
   appointmentDetailsStore.$reset()
 })
