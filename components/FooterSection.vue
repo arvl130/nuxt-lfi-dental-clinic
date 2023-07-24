@@ -185,14 +185,6 @@
             </li>
             <li>
               <NuxtLink
-                to="/accountsettings"
-                class="font-semibold hover:underline text-sky-700"
-              >
-                My Account
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink
                 to="/faqs"
                 class="font-semibold hover:underline text-sky-700"
               >
