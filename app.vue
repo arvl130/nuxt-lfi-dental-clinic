@@ -26,6 +26,13 @@ onUnmounted(() => {
 })
 </script>
 
+<style>
+:target {
+  scroll-margin-top: 8rem;
+  scroll-behavior: smooth;
+}
+</style>
+
 <template>
   <div>
     <NuxtLayout>

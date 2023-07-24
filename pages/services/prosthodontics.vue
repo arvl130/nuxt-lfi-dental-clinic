@@ -14,7 +14,10 @@ useHead({
   <!-- Main content -->
   <section>
     <div class="max-w-6xl mx-auto px-6 py-24">
-      <article class="grid md:grid-cols-2 max-w-4xl mx-auto mb-24">
+      <article
+        id="complete-denture"
+        class="grid md:grid-cols-2 max-w-4xl mx-auto mb-24"
+      >
         <div class="mb-6 md:mb-0">
           <img
             src="~/assets/img/dental-services/complete-denture.jpg"
@@ -41,7 +44,10 @@ useHead({
           </div>
         </div>
       </article>
-      <article class="grid md:grid-cols-2 max-w-4xl mx-auto mb-24">
+      <article
+        id="partial-denture"
+        class="grid md:grid-cols-2 max-w-4xl mx-auto mb-24"
+      >
         <div class="flex flex-col justify-center text-justify md:pl-12">
           <h4 class="text-2xl font-bold mb-3">Partial Denture</h4>
           <p class="mb-3">
@@ -67,7 +73,10 @@ useHead({
           />
         </div>
       </article>
-      <article class="grid md:grid-cols-2 max-w-4xl mx-auto mb-24">
+      <article
+        id="jacket-crown"
+        class="grid md:grid-cols-2 max-w-4xl mx-auto mb-24"
+      >
         <div class="mb-6 md:mb-0">
           <img
             src="~/assets/img/dental-services/jacket-crown.jpg"
@@ -94,7 +103,7 @@ useHead({
           </div>
         </div>
       </article>
-      <article class="grid md:grid-cols-2 max-w-4xl mx-auto">
+      <article id="fixed-bridge" class="grid md:grid-cols-2 max-w-4xl mx-auto">
         <div class="flex flex-col justify-center text-justify md:pl-12">
           <h4 class="text-2xl font-bold mb-3">Fixed Bridge</h4>
           <p class="mb-3">

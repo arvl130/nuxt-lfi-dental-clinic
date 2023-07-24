@@ -32,16 +32,106 @@
             Services
           </h2>
           <ul class="text-center text-gray-600 md:text-left dark:text-gray-400">
-            <li class="font-semibold text-sky-700">Whitening</li>
-            <li class="font-semibold text-sky-700">Oral Prophylaxis</li>
-            <li class="font-semibold text-sky-700">Tooth Restoration</li>
-            <li class="font-semibold text-sky-700">Flouride Treatment</li>
-            <li class="font-semibold text-sky-700">Orthodontic Braces</li>
-            <li class="font-semibold text-sky-700">Complete Denture</li>
-            <li class="font-semibold text-sky-700">Tooth Extraction</li>
-            <li class="font-semibold text-sky-700">Partial Denture</li>
-            <li class="font-semibold text-sky-700">Jacket Crown</li>
-            <li class="font-semibold text-sky-700">Fixed Bridge</li>
+            <li class="font-semibold text-sky-700">
+              <NuxtLink
+                :to="{
+                  path: '/services/cosmetic-surgery',
+                  hash: '#tooth-whitening',
+                }"
+              >
+                Tooth Whitening
+              </NuxtLink>
+            </li>
+            <li class="font-semibold text-sky-700">
+              <NuxtLink
+                :to="{
+                  path: '/services/general-dentistry',
+                  hash: '#oral-prophylaxis',
+                }"
+              >
+                Oral Prophylaxis
+              </NuxtLink>
+            </li>
+            <li class="font-semibold text-sky-700">
+              <NuxtLink
+                :to="{
+                  path: '/services/general-dentistry',
+                  hash: '#tooth-restoration',
+                }"
+              >
+                Tooth Restoration
+              </NuxtLink>
+            </li>
+            <li class="font-semibold text-sky-700">
+              <NuxtLink
+                :to="{
+                  path: '/services/pediatric-dentistry',
+                  hash: '#fluoride-treatment',
+                }"
+              >
+                Flouride Treatment
+              </NuxtLink>
+            </li>
+            <li class="font-semibold text-sky-700">
+              <NuxtLink
+                :to="{
+                  path: '/services/orthodontics',
+                  hash: '#orthodontic-braces',
+                }"
+              >
+                Orthodontic Braces
+              </NuxtLink>
+            </li>
+            <li class="font-semibold text-sky-700">
+              <NuxtLink
+                :to="{
+                  path: '/services/prosthodontics',
+                  hash: '#complete-denture',
+                }"
+              >
+                Complete Denture
+              </NuxtLink>
+            </li>
+            <li class="font-semibold text-sky-700">
+              <NuxtLink
+                :to="{
+                  path: '/services/oral-surgery',
+                  hash: '#tooth-extraction',
+                }"
+              >
+                Tooth Extraction
+              </NuxtLink>
+            </li>
+            <li class="font-semibold text-sky-700">
+              <NuxtLink
+                :to="{
+                  path: '/services/prosthodontics',
+                  hash: '#partial-denture',
+                }"
+              >
+                Partial Denture
+              </NuxtLink>
+            </li>
+            <li class="font-semibold text-sky-700">
+              <NuxtLink
+                :to="{
+                  path: '/services/prosthodontics',
+                  hash: '#jacket-crown',
+                }"
+              >
+                Jacket Crown
+              </NuxtLink>
+            </li>
+            <li class="font-semibold text-sky-700">
+              <NuxtLink
+                :to="{
+                  path: '/services/prosthodontics',
+                  hash: '#fixed-bridge',
+                }"
+              >
+                Fixed Bridge
+              </NuxtLink>
+            </li>
           </ul>
         </div>
 
@@ -53,9 +143,12 @@
           </h2>
           <ul class="text-center text-gray-600 md:text-left">
             <li>
-              <a href="/" class="font-semibold hover:underline text-sky-700"
-                >Home</a
+              <NuxtLink
+                to="/"
+                class="font-semibold hover:underline text-sky-700"
               >
+                Home
+              </NuxtLink>
             </li>
 
             <li>
@@ -67,32 +160,36 @@
               </NuxtLink>
             </li>
             <li>
-              <a
-                href="/Appointments"
+              <NuxtLink
+                to="/appointments"
                 class="font-semibold hover:underline text-sky-700"
-                >Appointments</a
               >
+                Appointments
+              </NuxtLink>
             </li>
             <li>
-              <a
-                href="/About"
+              <NuxtLink
+                to="/about"
                 class="font-semibold hover:underline text-sky-700"
-                >About Us</a
               >
+                About Us
+              </NuxtLink>
             </li>
             <li>
-              <a
-                href="/Contact"
+              <NuxtLink
+                to="/contact"
                 class="font-semibold hover:underline text-sky-700"
-                >Contact Us</a
               >
+                Contact Us
+              </NuxtLink>
             </li>
             <li>
-              <a
-                href="/accountsettings"
+              <NuxtLink
+                to="/accountsettings"
                 class="font-semibold hover:underline text-sky-700"
-                >My Account</a
               >
+                My Account
+              </NuxtLink>
             </li>
             <li>
               <NuxtLink

@@ -13,7 +13,10 @@ useHead({
   </section>
   <section>
     <div class="max-w-6xl mx-auto px-6 py-24">
-      <article class="grid md:grid-cols-2 max-w-prose mx-auto mb-24">
+      <article
+        id="oral-prophylaxis"
+        class="grid md:grid-cols-2 max-w-prose mx-auto mb-24"
+      >
         <div class="mb-6 md:mb-0">
           <img
             src="~/assets/img/dental-services/oral-prophylaxis.jpg"
@@ -39,7 +42,10 @@ useHead({
           </div>
         </div>
       </article>
-      <article class="grid md:grid-cols-2 max-w-prose mx-auto">
+      <article
+        id="tooth-restoration"
+        class="grid md:grid-cols-2 max-w-prose mx-auto"
+      >
         <div class="flex flex-col justify-center text-center md:pr-6">
           <h4 class="text-2xl font-bold mb-3">Tooth Restoration</h4>
           <p class="mb-3">

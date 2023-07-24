@@ -14,7 +14,10 @@ useHead({
   <!-- Main content -->
   <section>
     <div class="max-w-6xl mx-auto px-6 py-24">
-      <article class="grid md:grid-cols-2 max-w-4xl mx-auto">
+      <article
+        id="tooth-extraction"
+        class="grid md:grid-cols-2 max-w-4xl mx-auto"
+      >
         <div class="mb-6 md:mb-0">
           <img
             src="~/assets/img/dental-services/tooth-extraction.jpg"
