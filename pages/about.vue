@@ -18,22 +18,32 @@ useHead({
   <section class="max-w-6xl mx-auto px-6 py-16">
     <div class="max-w-fit mx-auto">
       <h3 class="font-bold text-center text-3xl mb-3">History</h3>
-      <p class="max-w-4xl text-center">
-        Dr. Lani Isidro earned her bachelor's degree in 1989 from Manila Central
-        University. Coming from a family of doctors, she passed her licensure
-        exam in 1991. Her desire to help others through her degree was her
-        inspiration in opening her first dental clinic in Monserrat Morning
-        Breeze with the support of her older sister, optometrist Dr. Lota
-        Fragante. In 1997, she chose to relocate her dental practice to their
-        home at Dolmar Golden Hills Llano Road Novaliches Caloocan City so that
-        she could fulfill her lifelong dream of being a dentist and a mother.
-        After 14 years, the Lord prompted her to relocate her dentistry business
-        to Jordan Plains Subdivision Novaliches Quezon City, beside Jesus
-        Amazing Grace Church where she was appointed as a full pledge pastor.
-        Serving not just the patient's toothache but also leading and helping
-        others to know Christ more. In 2010, she studied orthodontics at Prime
-        Orthodontics Studies and Training Philippines, Inc.
-      </p>
+      <div class="max-w-3xl text-justify">
+        <p class="mb-3">
+          Dr. Lani F. Isidro earned her bachelor's degree in 1989 from Manila
+          Central University. Coming from a family of doctors, she passed her
+          licensure exam in 1991. Her desire to help others through her degree
+          was her inspiration in opening her first dental clinic in Monserrat
+          Morning Breeze with the support of her older sister, optometrist Dr.
+          Lota Fragante.
+        </p>
+        <p class="mb-3">
+          In 1997, she chose to relocate her dental practice to their home at
+          Dolmar Golden Hills, Novaliches, Caloocan City so that she could
+          fulfill her lifelong dream of being a dentist and a mother.
+        </p>
+        <p class="mb-3">
+          After 14 years, the Lord prompted her to relocate her dentistry
+          business to Jordan Plains, Novaliches, Quezon City, beside Jesus
+          Amazing Grace Church where she was appointed as a full pledge pastor.
+          Serving not just the patient's toothache but also leading and helping
+          others to know Christ more.
+        </p>
+        <p>
+          In 2010, she studied orthodontics at Prime Orthodontics Studies and
+          Training Philippines, Inc.
+        </p>
+      </div>
     </div>
   </section>
 
