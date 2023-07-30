@@ -23,6 +23,11 @@ Originally, this project was built with Vue + Vite, but later on it was migrated
 - [Firebase](https://firebase.google.com) for storage, database, and authentication
 - [CloudWatch Events](https://aws.amazon.com/cloudwatch) for automated reminders
 
+## Design Prototype
+
+- Patient pages - View in [Figma](https://www.figma.com/file/y0RIZJvOfIuciit3XQ4yRM/Patient-View)
+- Admin pages - View in [Figma](https://www.figma.com/file/24VlEkk0LzDjrenNn5IXIh/Admin-View)
+
 ## Setup
 
 This project uses Node.js with NPM or Yarn for project management. For authentication and
