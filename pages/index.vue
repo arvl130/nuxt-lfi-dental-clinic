@@ -2,6 +2,12 @@
 useHead({
   title: "LFI Dental Clinic",
 })
+
+onMounted(() => {
+  alert(
+    "This is a demo site maintained by students of Quezon City University. Some assets and information on this website may be inaccurate and used entirely for illustrative purposes only."
+  )
+})
 </script>
 <style>
 .homepage-hero-section:after {
