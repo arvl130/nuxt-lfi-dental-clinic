@@ -50,12 +50,12 @@ const onSendButton = async () => {
             Monica, Novaliches, Quezon City
           </li>
           <li class="mt-4">
-            <span class="text-teal-500 font-bold">Mobile:</span> (+63) 928 463
-            2914
+            <span class="text-teal-500 font-bold">Mobile:</span> (+63) 912 345
+            6789
           </li>
           <li>
-            <span class="text-teal-500 font-bold">Landline:</span> (+63) 28 579
-            9537
+            <span class="text-teal-500 font-bold">Landline:</span> (+63) 21 234
+            5678
           </li>
         </ul>
         <iframe
