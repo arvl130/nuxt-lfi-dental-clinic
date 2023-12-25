@@ -13,7 +13,7 @@
     "@types/luxon": "^3.3.3",
     "@types/node": "^20.10.5",
     "@types/nodemailer": "^6.4.13",
-    "nuxt": "3.8.2"
+    "nuxt": "^3.9.0"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.5.1",
